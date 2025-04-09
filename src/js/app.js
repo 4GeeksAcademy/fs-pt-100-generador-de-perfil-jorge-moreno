@@ -1,5 +1,4 @@
-import "./style.css";
-
+import "../style/index.css";
 function render(variables = {}) {
   console.log("These are the current variables: ", variables);
 
@@ -25,7 +24,19 @@ function render(variables = {}) {
 
   document.querySelector(
     "#widget_content"
-  ).innerHTML = `<div class="widget">       ${cover}       <img src="${variables.avatarURL}" class="photo" />       <h1>${name} ${lastName}</h1>       <h2>${role}</h2>       <h3>${city}, ${country}</h3>       <ul class="${socialPositionClass}">         <li><a href="<https://twitter.com/${twitter}>" target="_blank"><i class="fab fa-twitter"></i></a></li>         <li><a href="<https://github.com/${github}>" target="_blank"><i class="fab fa-github"></i></a></li>         <li><a href="<https://linkedin.com/${linkedin}>" target="_blank"><i class="fab fa-linkedin"></i></a></li>         <li><a href="<https://instagram.com/${instagram}>" target="_blank"><i class="fab fa-instagram"></i></a></li>       </ul>     </div>`;
+  ).innerHTML = `<div class="widget"> ${cover} 
+   <img src="${variables.avatarURL}" class="photo" /> 
+     <h1>${name} ${lastName}</h1>   
+       <h2>${role}</h2> 
+           <h3>${city}, ${country}</h3>   
+             <ul class="${socialPositionClass}">
+                 <li><a href="<https://twitter.com/${twitter}>" target="_blank"><i class="fab fa-twitter"></i></a></li>   
+                   <li>
+                   <a href="<https://github.com/${github}>" target="_blank"><i class="fab fa-github"></i></a></li>     
+                       <li><a href="<https://linkedin.com/${linkedin}>" target="_blank"><i class="fab fa-linkedin"></i></a></li>      
+                          <li><a href="<https://instagram.com/${instagram}>" target="_blank"><i class="fab fa-instagram"></i></a></li>     
+                            </ul> 
+                                </div>`;
 }
 
 window.onload = function() {
